@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cmdrtitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="PKJ-HA-YPE">
+                                <rect key="frame" x="20" y="37" width="335" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PKJ-HA-YPE" secondAttribute="height" multiplier="335:51" id="KPv-jy-poL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTm-x8-EPN">
+                                <rect key="frame" x="20" y="103" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QTm-x8-EPN" secondAttribute="height" multiplier="1:1" id="7tK-Ce-z7o"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="blogger.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abc-Yu-rnG">
+                                <rect key="frame" x="118" y="103" width="57" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="abc-Yu-rnG" secondAttribute="height" multiplier="57:49" id="fxx-jy-Boo"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="twitter.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCN-mQ-TgA">
+                                <rect key="frame" x="211" y="102" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hCN-mQ-TgA" secondAttribute="height" multiplier="1:1" id="0Jv-EM-EMD"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="github.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfW-XD-wqf">
+                                <rect key="frame" x="305" y="102" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sfW-XD-wqf" secondAttribute="height" multiplier="1:1" id="JBm-3m-37a"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="youtube.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="abc-Yu-rnG" firstAttribute="leading" secondItem="QTm-x8-EPN" secondAttribute="trailing" constant="48" id="0dA-cg-woY"/>
+                            <constraint firstItem="abc-Yu-rnG" firstAttribute="top" secondItem="PKJ-HA-YPE" secondAttribute="bottom" constant="15" id="1n3-Ad-5Lr"/>
+                            <constraint firstItem="PKJ-HA-YPE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="579-v3-V88"/>
+                            <constraint firstItem="sfW-XD-wqf" firstAttribute="leading" secondItem="hCN-mQ-TgA" secondAttribute="trailing" constant="44" id="Bmm-9A-pxg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sfW-XD-wqf" secondAttribute="trailing" id="E0l-rX-vmP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="QTm-x8-EPN" secondAttribute="leading" id="E25-9c-gOG"/>
+                            <constraint firstItem="hCN-mQ-TgA" firstAttribute="top" secondItem="PKJ-HA-YPE" secondAttribute="bottom" constant="14" id="GgQ-Tc-gAI"/>
+                            <constraint firstItem="abc-Yu-rnG" firstAttribute="height" secondItem="hCN-mQ-TgA" secondAttribute="height" id="Hp5-1C-jHz"/>
+                            <constraint firstItem="sfW-XD-wqf" firstAttribute="top" secondItem="PKJ-HA-YPE" secondAttribute="bottom" constant="14" id="ItB-y6-dfI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PKJ-HA-YPE" secondAttribute="trailing" id="Lt3-sZ-60Y"/>
+                            <constraint firstItem="QTm-x8-EPN" firstAttribute="top" secondItem="PKJ-HA-YPE" secondAttribute="bottom" constant="15" id="QWK-I7-6bT"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="PKJ-HA-YPE" secondAttribute="leading" id="YhM-mn-0NA"/>
+                            <constraint firstItem="hCN-mQ-TgA" firstAttribute="width" secondItem="sfW-XD-wqf" secondAttribute="width" id="fcb-j1-FQp"/>
+                            <constraint firstItem="QTm-x8-EPN" firstAttribute="width" secondItem="abc-Yu-rnG" secondAttribute="width" id="ony-1v-f5W"/>
+                            <constraint firstItem="hCN-mQ-TgA" firstAttribute="leading" secondItem="abc-Yu-rnG" secondAttribute="trailing" constant="36" id="pH1-rK-l2r"/>
+                            <constraint firstItem="abc-Yu-rnG" firstAttribute="width" secondItem="hCN-mQ-TgA" secondAttribute="width" id="pOl-hh-P1H"/>
+                            <constraint firstItem="PKJ-HA-YPE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="sBQ-co-sYo"/>
+                            <constraint firstItem="QTm-x8-EPN" firstAttribute="height" secondItem="abc-Yu-rnG" secondAttribute="height" id="srs-Sp-cUl"/>
+                            <constraint firstItem="hCN-mQ-TgA" firstAttribute="height" secondItem="sfW-XD-wqf" secondAttribute="height" id="wDv-6U-13t"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="386.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blogger.png" width="225" height="225"/>
+        <image name="cmdrtitle.png" width="800" height="100"/>
+        <image name="github.png" width="225" height="225"/>
+        <image name="twitter.png" width="249" height="202"/>
+        <image name="youtube.png" width="225" height="225"/>
+    </resources>
+</document>
