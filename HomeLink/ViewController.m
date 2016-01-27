@@ -57,4 +57,5 @@
     self.browser.hidden = YES;
     
 }
+
 @end

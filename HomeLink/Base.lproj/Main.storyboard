@@ -81,9 +81,9 @@
                                             <constraint firstAttribute="width" secondItem="KIF-2L-NIH" secondAttribute="height" multiplier="375:44" id="sHi-En-AOq"/>
                                         </constraints>
                                         <items>
-                                            <barButtonItem enabled="NO" style="plain" systemItem="done" id="XtF-qr-bdp">
+                                            <barButtonItem systemItem="done" id="ZL4-qM-lgJ" userLabel="Done">
                                                 <connections>
-                                                    <action selector="doneButton:" destination="BYZ-38-t0r" id="Bep-yb-JMH"/>
+                                                    <action selector="doneButton:" destination="BYZ-38-t0r" id="jsj-SA-4Qp"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="6Fz-Qq-aYu"/>
