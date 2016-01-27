@@ -26,11 +26,14 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTm-x8-EPN">
-                                <rect key="frame" x="20" y="103" width="50" height="50"/>
+                                <rect key="frame" x="20" y="102" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QTm-x8-EPN" secondAttribute="height" multiplier="1:1" id="7tK-Ce-z7o"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="blogger.png"/>
+                                <connections>
+                                    <action selector="bloggerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QG6-9c-vEq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abc-Yu-rnG">
                                 <rect key="frame" x="118" y="103" width="57" height="49"/>
@@ -38,6 +41,9 @@
                                     <constraint firstAttribute="width" secondItem="abc-Yu-rnG" secondAttribute="height" multiplier="57:49" id="fxx-jy-Boo"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="twitter.png"/>
+                                <connections>
+                                    <action selector="twitterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hkD-6W-kh9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCN-mQ-TgA">
                                 <rect key="frame" x="211" y="102" width="50" height="50"/>
@@ -45,6 +51,9 @@
                                     <constraint firstAttribute="width" secondItem="hCN-mQ-TgA" secondAttribute="height" multiplier="1:1" id="0Jv-EM-EMD"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="github.png"/>
+                                <connections>
+                                    <action selector="githubButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hlm-vW-Qg6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfW-XD-wqf">
                                 <rect key="frame" x="305" y="102" width="50" height="50"/>
@@ -52,19 +61,62 @@
                                     <constraint firstAttribute="width" secondItem="sfW-XD-wqf" secondAttribute="height" multiplier="1:1" id="JBm-3m-37a"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="youtube.png"/>
+                                <connections>
+                                    <action selector="youtubeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W8J-3s-mGp"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alq-Rp-Gvm">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMa-lU-EZh">
+                                        <rect key="frame" x="0.0" y="38" width="375" height="601"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="BMa-lU-EZh" secondAttribute="height" multiplier="375:601" id="njE-mT-uDG"/>
+                                        </constraints>
+                                    </webView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIF-2L-NIH">
+                                        <rect key="frame" x="0.0" y="-6" width="375" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KIF-2L-NIH" secondAttribute="height" multiplier="375:44" id="sHi-En-AOq"/>
+                                        </constraints>
+                                        <items>
+                                            <barButtonItem enabled="NO" style="plain" systemItem="done" id="XtF-qr-bdp">
+                                                <connections>
+                                                    <action selector="doneButton:" destination="BYZ-38-t0r" id="Bep-yb-JMH"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="6Fz-Qq-aYu"/>
+                                            <barButtonItem enabled="NO" systemItem="stop" id="lWM-S5-UsC"/>
+                                            <barButtonItem systemItem="refresh" id="rzv-kR-DxS"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="PPh-Zy-bYe"/>
+                                            <barButtonItem systemItem="rewind" id="Gae-xy-Zlk"/>
+                                            <barButtonItem systemItem="fastForward" id="8Ok-px-VXI"/>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="KIF-2L-NIH" firstAttribute="centerX" secondItem="alq-Rp-Gvm" secondAttribute="centerX" id="AR7-Gp-fmz"/>
+                                    <constraint firstItem="KIF-2L-NIH" firstAttribute="top" secondItem="alq-Rp-Gvm" secondAttribute="top" constant="16" id="JHt-my-eIb"/>
+                                    <constraint firstItem="BMa-lU-EZh" firstAttribute="top" secondItem="KIF-2L-NIH" secondAttribute="bottom" id="Kda-D8-YbI"/>
+                                    <constraint firstAttribute="width" secondItem="BMa-lU-EZh" secondAttribute="height" multiplier="375:601" id="icp-9E-k5b"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="abc-Yu-rnG" firstAttribute="leading" secondItem="QTm-x8-EPN" secondAttribute="trailing" constant="48" id="0dA-cg-woY"/>
                             <constraint firstItem="abc-Yu-rnG" firstAttribute="top" secondItem="PKJ-HA-YPE" secondAttribute="bottom" constant="15" id="1n3-Ad-5Lr"/>
                             <constraint firstItem="PKJ-HA-YPE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="579-v3-V88"/>
+                            <constraint firstItem="alq-Rp-Gvm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="6kx-IE-TCC"/>
                             <constraint firstItem="sfW-XD-wqf" firstAttribute="leading" secondItem="hCN-mQ-TgA" secondAttribute="trailing" constant="44" id="Bmm-9A-pxg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sfW-XD-wqf" secondAttribute="trailing" id="E0l-rX-vmP"/>
                             <constraint firstAttribute="leadingMargin" secondItem="QTm-x8-EPN" secondAttribute="leading" id="E25-9c-gOG"/>
                             <constraint firstItem="hCN-mQ-TgA" firstAttribute="top" secondItem="PKJ-HA-YPE" secondAttribute="bottom" constant="14" id="GgQ-Tc-gAI"/>
                             <constraint firstItem="abc-Yu-rnG" firstAttribute="height" secondItem="hCN-mQ-TgA" secondAttribute="height" id="Hp5-1C-jHz"/>
                             <constraint firstItem="sfW-XD-wqf" firstAttribute="top" secondItem="PKJ-HA-YPE" secondAttribute="bottom" constant="14" id="ItB-y6-dfI"/>
+                            <constraint firstItem="alq-Rp-Gvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JXT-kh-A0y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PKJ-HA-YPE" secondAttribute="trailing" id="Lt3-sZ-60Y"/>
                             <constraint firstItem="QTm-x8-EPN" firstAttribute="top" secondItem="PKJ-HA-YPE" secondAttribute="bottom" constant="15" id="QWK-I7-6bT"/>
                             <constraint firstAttribute="leadingMargin" secondItem="PKJ-HA-YPE" secondAttribute="leading" id="YhM-mn-0NA"/>
@@ -78,6 +130,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="WebView" destination="BMa-lU-EZh" id="G98-nm-sY8"/>
+                        <outlet property="browser" destination="alq-Rp-Gvm" id="b2D-iw-mjI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

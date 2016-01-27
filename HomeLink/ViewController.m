@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.browser.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +26,35 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)bloggerButton:(id)sender {
+    
+    self.browser.hidden = NO;
+    [self.WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cmdrtorefresh.blogspot.com"]]];
+}
+
+- (IBAction)twitterButton:(id)sender {
+
+    self.browser.hidden = NO;
+    [self.WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.twitter.com/cmdrtorefresh"]]];
+
+}
+
+- (IBAction)githubButton:(id)sender {
+    
+    self.browser.hidden = NO;
+    [self.WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://github.com/cmdrtorefresh"]]];
+    
+}
+
+- (IBAction)youtubeButton:(id)sender {
+    
+    self.browser.hidden = NO;
+    [self.WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.youtube.com/channel/UCq6bMM3bnrmqn6L-rhaVQiA"]]];
+    
+}
+- (IBAction)doneButton:(id)sender {
+    
+    self.browser.hidden = YES;
+    
+}
 @end

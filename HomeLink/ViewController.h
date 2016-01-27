@@ -10,6 +10,13 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)bloggerButton:(id)sender;
+- (IBAction)twitterButton:(id)sender;
+- (IBAction)githubButton:(id)sender;
+- (IBAction)youtubeButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *browser;
+- (IBAction)doneButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIWebView *WebView;
 
 @end
 
