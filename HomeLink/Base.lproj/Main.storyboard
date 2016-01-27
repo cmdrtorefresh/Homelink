@@ -68,7 +68,7 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alq-Rp-Gvm">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <subviews>
-                                    <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMa-lU-EZh">
+                                    <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMa-lU-EZh">
                                         <rect key="frame" x="0.0" y="38" width="375" height="601"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
@@ -87,11 +87,28 @@
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="6Fz-Qq-aYu"/>
-                                            <barButtonItem enabled="NO" systemItem="stop" id="lWM-S5-UsC"/>
-                                            <barButtonItem systemItem="refresh" id="rzv-kR-DxS"/>
+                                            <barButtonItem enabled="NO" systemItem="stop" id="lWM-S5-UsC">
+                                                <color key="tintColor" red="1" green="0.14437495084230412" blue="0.18851699482850548" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="stopLoading" destination="BMa-lU-EZh" id="kHf-2U-yAZ"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="refresh" id="rzv-kR-DxS">
+                                                <connections>
+                                                    <action selector="reload" destination="BMa-lU-EZh" id="lZt-qq-PVJ"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="PPh-Zy-bYe"/>
-                                            <barButtonItem systemItem="rewind" id="Gae-xy-Zlk"/>
-                                            <barButtonItem systemItem="fastForward" id="8Ok-px-VXI"/>
+                                            <barButtonItem systemItem="rewind" id="Gae-xy-Zlk">
+                                                <connections>
+                                                    <action selector="goBack" destination="BMa-lU-EZh" id="d1L-qf-Gbw"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="fastForward" id="8Ok-px-VXI">
+                                                <connections>
+                                                    <action selector="goForward" destination="BMa-lU-EZh" id="zRc-vv-Ioj"/>
+                                                </connections>
+                                            </barButtonItem>
                                         </items>
                                     </toolbar>
                                 </subviews>
