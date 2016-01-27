@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UIWebView *WebView;
 - (IBAction)doneButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *Indicator;
 
 @end
 

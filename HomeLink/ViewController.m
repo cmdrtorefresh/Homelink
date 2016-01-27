@@ -30,12 +30,14 @@
     
     self.browser.hidden = NO;
     [self.WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cmdrtorefresh.blogspot.com"]]];
+    [self indicatorAction];
 }
 
 - (IBAction)twitterButton:(id)sender {
 
     self.browser.hidden = NO;
     [self.WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.twitter.com/cmdrtorefresh"]]];
+    [self indicatorAction];
 
 }
 
@@ -43,6 +45,7 @@
     
     self.browser.hidden = NO;
     [self.WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://github.com/cmdrtorefresh"]]];
+    [self indicatorAction];
     
 }
 
@@ -50,6 +53,7 @@
     
     self.browser.hidden = NO;
     [self.WebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.youtube.com/channel/UCq6bMM3bnrmqn6L-rhaVQiA"]]];
+    [self indicatorAction];
     
 }
 - (IBAction)doneButton:(id)sender {
@@ -57,5 +61,25 @@
     self.browser.hidden = YES;
     
 }
+
+
+
+- (void) indicatorAction {
+
+    NSTimer *timer;
+    [self.WebView addSubview:self.Indicator];
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0/2.0 target:self selector:@selector(loading) userInfo:nil repeats:YES];
+    
+}
+
+- (void)loading{
+    
+    if (!self.WebView.loading)
+        [self.Indicator stopAnimating];
+    else
+        [self.Indicator startAnimating];
+    
+}
+
 
 @end

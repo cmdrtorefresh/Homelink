@@ -109,6 +109,10 @@
                                             </barButtonItem>
                                         </items>
                                     </toolbar>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bHy-7w-LKv">
+                                        <rect key="frame" x="169" y="320" width="37" height="37"/>
+                                        <color key="color" red="0.34387260935378439" green="0.57961770010641644" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -146,6 +150,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="Indicator" destination="bHy-7w-LKv" id="Yl2-CR-XXl"/>
                         <outlet property="WebView" destination="BMa-lU-EZh" id="G98-nm-sY8"/>
                         <outlet property="browser" destination="alq-Rp-Gvm" id="b2D-iw-mjI"/>
                     </connections>
